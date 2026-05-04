@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Sayang 💖</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+#pesan {
+    display: none;
+    font-size: 18px;
+    padding: 20px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #ff4d6d;
+    cursor: pointer;
+}
+
+.galeri {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.galeri img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: jatuh 5s linear infinite;
+}
+
+@keyframes jatuh {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(100vh); }
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Happy Birthday Sayang 🎂💖</h1>
+
+<button onclick="mulai()">Klik Aku 💕</button>
+
+<div id="pesan">
+
+<p>Selamat ulang tahun ya sayang ❤️</p>
+
+<p>Hari ini adalah hari yang paling spesial buat kamu, dan buat aku juga. Karena di hari ini, orang yang paling berarti dalam hidup aku lahir ke dunia ini 💖</p>
+
+<p>Aku cuma mau kamu tahu, aku bersyukur banget bisa kenal kamu. Dari sekian banyak orang di dunia ini, aku dipertemukan sama kamu, dan itu bukan hal yang biasa buat aku ✨</p>
+
+<p>Kamu itu bukan cuma seseorang yang aku sayang, tapi juga seseorang yang selalu ada buat aku. Di saat aku senang, kamu ada. Di saat aku lagi down, kamu juga tetap di samping aku 💕</p>
+
+<p>Kamu selalu bisa bikin aku tenang, bikin aku ketawa, dan jadi alasan kenapa aku tetap kuat sampai sekarang. Kehadiran kamu itu bener-bener berarti buat aku ❤️</p>
+
+<p>Aku tahu kita pernah lewatin banyak hal, gak semuanya mudah. Tapi justru dari situ aku makin yakin kalau aku mau tetap sama kamu, jalan bareng kamu, pelan-pelan, tanpa harus buru-buru, tapi pasti 💖</p>
+
+<p>Di ulang tahun kamu ini, aku berharap semua hal baik datang ke hidup kamu. Semoga kamu selalu sehat, panjang umur, selalu dilindungi, dan semua impian kamu bisa tercapai satu per satu 🌸</p>
+
+<p>Aku juga berharap kamu selalu bahagia, bukan cuma hari ini, tapi setiap hari. Dan kalau bisa, aku pengen jadi salah satu alasan kamu bahagia itu 💕</p>
+
+<p>Terima kasih ya sayang sudah hadir di hidup aku. Terima kasih sudah bertahan sejauh ini, sudah sabar menghadapi aku, dan sudah sayang sama aku 💖</p>
+
+<p>Mungkin aku belum sempurna, tapi aku akan selalu berusaha jadi yang terbaik buat kamu ❤️</p>
+
+<p><b>Dari aku, Fadil… aku sayang kamu hari ini, besok, dan seterusnya, Semangat Buat Masa Depan💖</b></p>
+
+<!-- FOTO -->
+<div class="galeri">
+    <img src="foto1.jpg">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
+</div>
+
+</div>
+
+<!-- MUSIK -->
+<audio id="musik" loop>
+    <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function mulai() {
+    document.getElementById("pesan").style.display = "block";
+    document.getElementById("musik").play();
+}
+
+setInterval(function(){
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.fontSize = (10 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}, 300);
+</script>
+
+</body>
+</html>
